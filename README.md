@@ -8,8 +8,7 @@ This project demonstrates how refactoring existing code can improve and optimize
 The purpose of our project is to make the VBA code we wrote to analyze our stock volume and price data more efficient and run faster so that it can be used to analyze much larger stock data sets, without straining the computing resources or time limitations. After writing initial VBA code where we used two "for" loops and several conditional statements to add up the trading volume for each stock by year, we refactored the VBA script to produce the same output in less time. The refactored code added 3 arrays to the original code and used an index variable to iterate through the stock dataset once instead of multiple times and output the annual trading volume and annual stock performance for each stock. The index variable is used to access the corresponding data for each different stock in the stock ticker index and the loop collects the required output data more efficiently. This refactoring of the code makes it possible to run the analysis faster, even though the output results and functionality of the code do not change.
 
 
-##  Results: 
-### Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
+##  Results:
 
 While the original VBA code we wrote works to show the performance and trading volume of the stocks in our dataset, using 2 loops requires the dataset to be looped through many more times than necessary. Below is the relevant portion of the original VBA code:
 
@@ -63,3 +62,4 @@ Using arrays and an index variable to find and store the daily trading volume an
 * opportunity cost of not spending time working on something that generates revenue or creates new code
 
 ##### How do these pros and cons apply to refactoring the original VBA script?
+Refactoring the original VBA script effectively reduced the amount of time it takes to execute our analysis. In addition to making the code more efficient, this process allowed us the opportunity to add comments explaining what each section of code is doing, which will make it easier for other people to work with this code in the future.  This exercise also improved the understanding we have about our dataset and explore new ways of extracting the same results, and a deeper understanding of the step-by-step processes we wrote into VBA. The refactoring process was time and effort intensive, and this represents an opportunity cost of not spending time developing new code or other projects, but has the benefit that the code is now more efficient, and we understand how we were able to make this possible- which should outweigh the disadvantages in the long term. 
