@@ -11,13 +11,19 @@ The purpose of our project is to make the VBA code we wrote to analyze our stock
 ##  Results: 
 ### Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
-
+While the original VBA code we wrote works to show the performance and trading volume of the stocks in our dataset, using 2 loops requires the dataset to be looped through many more times than necessary. Below is the relevant portion of the original VBA code:
 
  ![OriginalVBACode_Loops&conditional_Snippet](./Additional_Resources/Original_VBAScript.png)
 
+The refactored VBA code has the exact same funtionality, but uses 3 additional arrays that we created to identify and store the necessary data. We used an index variable named "(tickerIndex)" to access the corresponding volume and closing price data. 
+
  ![RefactoredVBACode_Loops&conditional_Snippet](./Additional_Resources/Refactored_VBAScript_Loops&Conditionals.png)
  
+ The final loop we wrote in the refactored VBA code outputs the volume and closing price data from the new arrays we created, and this process requires less loops than the original code, which makes it faster and more efficient.
+
  ![RefactoredVBACode_OutputDataFrom3NewArrays_Snippet](./Additional_Resources/Refactored_VBAScript_OutputDataFrom3NewArrays.png)
+
+ This refactored code is longer and more complex to write, but serves the purpose of reducing the amount of time required to run the analysis. 
  
 The original code we wrote to analyze the stock dataset executed in between 0.53 and 0.56 seconds, for the 2017 and 2018 stock dataset:
 
@@ -38,23 +44,21 @@ The original code we wrote to analyze the stock dataset executed in between 0.53
  ![RefactoredCodePerformance2018](./Resources/VBA_Challenge_2018.png)
 
  
-  This is significant improvement, an 81% drop in execution time.
-Using an array(index) to find and store the daily trading volume and closing stock prices for each stock, improves the efficiency of the operations and this makes it possible to reduce the time to run.
+  This is significant performance improvement: a greater than 80% drop in execution time.
+Using arrays and an index variable to find and store the daily trading volume and closing stock prices for each stock, improves the efficiency of the operations and this makes it possible to reduce the time to run.
 
 
 
 ##  Summary: 
 
-### In a summary statement, address the following questions.
-
-##### What are the advantages or disadvantages of refactoring code?
-### Advantages of refactoring code include:
+#### Advantages of refactoring code include:
 * reducing the time and system resources required to run code
 * identifying, reducing and avoiding bugs that could be time consuming and expensive to fix later 
-* make it easier for multiple people to work with and undesrtand the code, when they are maintaining or adding to the code 
- 
-* understanding the data, code and the processes it created better
-### The disadvantages could include
+* making it easier for multiple people to work with and undesrtand the code, when they are maintaining or adding to the code 
+* understanding the data, code and functionality it provides better can make development and analysis teams more efficient
+
+
+### The disadvantages of refactoring code include:
 * the time and effort it takes to identify, write, test and produce the refactored code
 * opportunity cost of not spending time working on something that generates revenue or creates new code
 
